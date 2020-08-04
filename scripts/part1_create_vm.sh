@@ -27,7 +27,7 @@ time gcloud compute instances create web-ravish27-devops \
 --boot-disk-size 10GB \
 --image-family=ubuntu-1604-lts \
 --image-project=ubuntu-os-cloud \
---metadata-from-file startup-script=./scripts/startup.sh \
+--metadata-from-file startup-script=./scripts/startup.sh $1 \
 #--image=ubuntu-1604-xenial-v20200729 \
 
 gcloud compute instances add-tags web-ravish27-devops --tags http-server,https-server --zone $ZONE --project $PROJECT
