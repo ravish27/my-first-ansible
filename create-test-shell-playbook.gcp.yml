@@ -8,9 +8,9 @@
       gcp_cred_file: /home/rsehgal/devops-training-281306-a5aae0650847.json
       zone: "us-central1-a"
       region: "us-central1"
-      tag1: "{{ tag1 }}"
+      tag1: "{{ name }}"
   tasks:
   - debug: msg="the echo was {{ tag }}"
-  - debug: msg="the echo was {{ tag1 }}"
+  - debug: msg="the echo was {{ name }}"
     #command: /bin/sh './scripts/part1_create_vm.sh'
     #- debug: msg="the echo was {{ role_path }}/files/part1_create_vm.sh"
