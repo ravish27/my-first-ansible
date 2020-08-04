@@ -12,7 +12,7 @@
   tasks:
   - name: pass variable to the sh script
     command: /bin/sh ./scripts/1-test_var.sh {{ tag }}
-  #- debug: msg="the echo was {{ tag }}"
+  - debug: msg="executed after calling 1-test_var.sh"
   #- debug: msg="the echo was {{ name }}"
     #command: /bin/sh './scripts/part1_create_vm.sh'
     #- debug: msg="the echo was {{ role_path }}/files/part1_create_vm.sh"
