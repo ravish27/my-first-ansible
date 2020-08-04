@@ -11,7 +11,7 @@
       #tag1: "{{ name }}"
   tasks:
   - name: pass variable to the sh script
-    command: /bin/sh ./scripts/1-test_var.sh {{ tag }}
+    command: /bin/sh ./scripts/part1_create_vm.sh {{ tag }}
   - debug: msg="executed after calling 1-test_var.sh"
   #- debug: msg="the echo was {{ name }}"
     #command: /bin/sh './scripts/part1_create_vm.sh'
