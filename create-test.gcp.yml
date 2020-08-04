@@ -1,0 +1,22 @@
+- name: Create an instance
+  hosts: localhost
+  gather_facts: no
+  vars:
+      gcp_project: devops-training-281306
+      gcp_cred_kind: serviceaccount
+      gcp_cred_file: /home/rsehgal/devops-training-281306-a5aae0650847.json
+      zone: "us-central1-a"
+      region: "us-central1"
+  tasks:
+  - name: create a instance
+    gcp_compute_instance:
+        state: present
+        name: "{{ item }}"
+        machine_type: n1-standard-1
+        zone: us-central1-a
+        project: devops-training-281306
+        auth_kind: "serviceaccount"
+        service_account_file: /home/rsehgal/devops-training-281306-a5aae0650847.json
+        state: present
+    with_items:
+      - instance-1

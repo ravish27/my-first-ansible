@@ -1,0 +1,2 @@
+---
+- import_playbook: playbooks/my-first-shell-playbook.yml

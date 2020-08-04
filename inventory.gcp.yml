@@ -1,0 +1,12 @@
+plugin: gcp_compute
+zones:
+ - us-central1-a
+projects:
+  - devops-training-281306
+filters: []
+groups:
+  webservers: "'web-' in name"
+scopes:
+  - https://www.googleapis.com/auth/compute
+service_account_file: /home/rsehgal/devops-training-281306-a5aae0650847.json
+auth_kind: serviceaccount

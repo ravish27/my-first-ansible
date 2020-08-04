@@ -1,0 +1,5 @@
+---
+# tasks file for gcp-create
+- name: create a disk
+  command: /bin/sh "{{ role_path }}/files/part1_create_vm.sh"
+#- debug: msg="the echo was {{ role_path }}/files/part1_create_vm.sh"
